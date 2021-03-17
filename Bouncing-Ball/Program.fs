@@ -31,7 +31,6 @@ type App(w: int, h: int) =
         pos <- (fst pos, snd pos + dir)
 
         let posInBuffer, isPosInBounds = Index(fst pos, (snd pos + 2 * int radius + 1))
-        //if (isPosInBounds) then printfn $"Character at position: {buffer.[posInBuffer]}"
 
         match dir with
         |  1 when (isPosInBounds && buffer.[posInBuffer] = '\u2593') -> (dir <- -1)
