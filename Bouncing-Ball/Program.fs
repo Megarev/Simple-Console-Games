@@ -34,7 +34,7 @@ type App(w: int, h: int) =
 
         match dir with
         |  1 when (isPosInBounds && buffer.[posInBuffer] = '\u2593') -> (dir <- -1)
-        | -1 when (snd pos - int radius - 1 < 0)     -> (dir <-  1)
+        | -1 when (snd pos - int radius - 1 < 0)                     -> (dir <-  1)
         | _ -> printf ""
 
     let Draw() =
